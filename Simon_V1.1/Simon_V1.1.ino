@@ -13,7 +13,7 @@ const int blueLedPin = 3;
 const int greenLedPin = 4;
 const int redLedPin = 5;
 
-// LED pin numbers
+// Button pin numbers
 const int yellowButtonPin = 6;
 const int blueButtonPin = 7;
 const int greenButtonPin = 8;
@@ -60,6 +60,8 @@ void setup() {
 }
 
 void generatePattern() {
+  randomSeed(analogRead(A0)); //should make the numbers more "random"
+  
   int n = 99;
   int i = 0;
   int upper = 4;
